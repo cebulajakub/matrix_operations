@@ -13,10 +13,15 @@ class Macierz {
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
    */
+Wektor wek[ROZMIAR];
+  float wyznacznik;
   public:
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
    */    
+  friend std::istream& operator >> (std::istream &Strm, Macierz &Mac);
+  friend std::ostream& operator << (std::ostream &Strm, const Macierz &Mac);
+
 };
 
 
@@ -27,7 +32,7 @@ class Macierz {
  * znalezc w pliku:
  *    ~bk/edu/kpo/zalecenia.txt 
  */
-std::istream& operator >> (std::istream &Strm, Macierz &Mac);
+
 
 /*
  * To przeciazenie trzeba opisac. Co ono robi. Jaki format
@@ -36,7 +41,7 @@ std::istream& operator >> (std::istream &Strm, Macierz &Mac);
  * znalezc w pliku:
  *    ~bk/edu/kpo/zalecenia.txt 
  */
-std::ostream& operator << (std::ostream &Strm, const Macierz &Mac);
+
 
 
 #endif
