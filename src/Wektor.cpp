@@ -44,7 +44,7 @@ this->wspolczynniki[i]/=L1;
 return (*this);
 }
 
-std::istream &operator>>(std::istream &Str, Wektor Wek){
+std::istream &operator>>(std::istream &Str, Wektor &Wek){
 for(int i=0;i<ROZMIAR;i++){
     Str>>Wek[i];    
 }
@@ -52,7 +52,7 @@ return Str;
 }
 
 
-std::ostream &operator<<(std::ostream &Str, Wektor Wek){
+std::ostream &operator<<(std::ostream &Str, Wektor &Wek){
 for(int i=0;i<ROZMIAR;i++){
     Str<<Wek[i];
 }

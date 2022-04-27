@@ -18,6 +18,9 @@ using namespace std;
 int main()
 {
   UkladRownanLiniowych   UklRown;   // To tylko przykladowe definicje zmiennej
+Wektor x;
+cin>>x;
+cout<<x;
 
   
   cout << endl << " Start programu " << endl << endl;

@@ -27,7 +27,9 @@ class Wektor {
   Wektor operator / (const double &L1);
   const double & operator [] (int ind) const {return this-> wspolczynniki[ind];}
   double & operator[] (int ind) {return this->wspolczynniki[ind];}
-  
+
+  friend std::ostream& operator << (std::ostream &Str, Wektor &Wek);
+  friend std::istream& operator >> (std::istream &Str, Wektor &Wek);
 };
 
 
@@ -38,7 +40,7 @@ class Wektor {
  * znalezc w pliku:
  *    ~bk/edu/kpo/zalecenia.txt 
  */
-std::istream& operator >> (std::istream &Strm, Wektor &Wek);
+
 
 /*
  * To przeciazenie trzeba opisac. Co ono robi. Jaki format
@@ -47,6 +49,6 @@ std::istream& operator >> (std::istream &Strm, Wektor &Wek);
  * znalezc w pliku:
  *    ~bk/edu/kpo/zalecenia.txt 
  */
-std::ostream& operator << (std::ostream &Strm, const Wektor &Wek);
+
 
 #endif
