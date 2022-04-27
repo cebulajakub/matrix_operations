@@ -21,10 +21,10 @@ class Wektor {
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
    */    
-  Wektor operator + (float L1);
-  Wektor operator - (float L1);
-  Wektor operator * (double L1);
-  Wektor operator / (double L1);
+  Wektor operator + (const Wektor &L1);
+  Wektor operator - (const Wektor &L1);
+  Wektor operator * (const double &L1);
+  Wektor operator / (const double &L1);
   const double & operator [] (int ind) const {return this-> wspolczynniki[ind];}
   double & operator[] (int ind) {return this->wspolczynniki[ind];}
   
