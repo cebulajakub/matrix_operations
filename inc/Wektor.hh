@@ -13,11 +13,9 @@ class Wektor {
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
    */
-  float x, y, z;
+  
   public:
-  double wspolczynniki[ROZMIAR];
-  Wektor() {x=y=z=0;}
-  Wektor (float x_nowa, float y_nowa, float z_nowa) {x=x_nowa; y=y_nowa; z=z_nowa;}
+  double wspolczynniki[ROZMIAR+1];
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
    */    
@@ -28,8 +26,8 @@ class Wektor {
   const double & operator [] (int ind) const {return this-> wspolczynniki[ind];}
   double & operator[] (int ind) {return this->wspolczynniki[ind];}
 
-  friend std::ostream& operator << (std::ostream &Str, Wektor &Wek);
-  friend std::istream& operator >> (std::istream &Str, Wektor &Wek);
+  friend std::ostream& operator << (std::ostream &Strm, Wektor &Wek);
+  friend std::istream& operator >> (std::istream &Strm, Wektor &Wek);
 };
 
 

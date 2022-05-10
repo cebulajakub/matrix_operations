@@ -11,7 +11,7 @@
 Wektor Wektor::operator +(const Wektor &L1){
 Wektor wynik;
 
-for(int i=0;i<ROZMIAR;i++){
+for(int i=0;i<ROZMIAR+1;i++){
 wynik[i]=this->wspolczynniki[i]+L1[i];
 }
 return wynik;
@@ -20,41 +20,41 @@ return wynik;
 Wektor Wektor::operator -(const Wektor &L1){
 Wektor wynik;
 
-for(int i=0;i<ROZMIAR;i++){
+for(int i=0;i<ROZMIAR+1;i++){
 wynik[i]=this->wspolczynniki[i]-L1[i];
 }
 return wynik;
 }
 
 Wektor Wektor::operator *(const double &L1){
-Wektor wyn;
 
-for(int i=0;i<ROZMIAR;i++){
+for(int i=0;i<ROZMIAR+1;i++){
 this->wspolczynniki[i]*=L1;
 }
 return (*this);
 }
 
 Wektor Wektor::operator /(const double &L1){
-Wektor wyn;
 
-for(int i=0;i<ROZMIAR;i++){
+for(int i=0;i<ROZMIAR+1;i++){
 this->wspolczynniki[i]/=L1;
 }
 return (*this);
 }
 
-std::istream &operator>>(std::istream &Str, Wektor &Wek){
-for(int i=0;i<ROZMIAR;i++){
-    Str>>Wek[i];    
+std::istream &operator>>(std::istream &Strm, Wektor &Wek){
+for(int i=0;i<ROZMIAR+1;i++){
+    Strm>>Wek[i];    
 }
-return Str;
+return Strm;
 }
 
 
-std::ostream &operator<<(std::ostream &Str, Wektor &Wek){
-for(int i=0;i<ROZMIAR;i++){
-    Str<<Wek[i];
+std::ostream &operator<<(std::ostream &Strm, Wektor &Wek){
+for(int i=0;i<ROZMIAR+1;i++){
+
+    Strm<<Wek[i]<<" ";
 }
-return Str;
+std::cout<<std::endl;
+return Strm;
 }
