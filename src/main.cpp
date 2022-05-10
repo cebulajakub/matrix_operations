@@ -23,4 +23,5 @@ cin>>UklRown;
   cout << endl << " Start programu " << endl << endl;
   cout<<UklRown;
   UklRown.obliczanie();
+  
 }

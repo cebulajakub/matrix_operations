@@ -27,19 +27,21 @@ return wynik;
 }
 
 Wektor Wektor::operator *(const double &L1){
+    Wektor wyn;
 
 for(int i=0;i<ROZMIAR+1;i++){
-this->wspolczynniki[i]*=L1;
+wyn[i]=(*this)[i]*L1;
 }
-return (*this);
+return wyn;
 }
 
 Wektor Wektor::operator /(const double &L1){
+Wektor wyn;
 
 for(int i=0;i<ROZMIAR+1;i++){
-this->wspolczynniki[i]/=L1;
+wyn[i]=(*this)[i]/L1;
 }
-return (*this);
+return wyn;
 }
 
 std::istream &operator>>(std::istream &Strm, Wektor &Wek){

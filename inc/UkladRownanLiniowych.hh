@@ -18,6 +18,7 @@ class UkladRownanLiniowych {
   friend std::ostream& operator<<(std::ostream &Strm, UkladRownanLiniowych &ukrown);
   friend std::istream& operator>>(std::istream &Strm, UkladRownanLiniowych &ukrown);
   bool obliczanie();
+  void wynik();
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
    */    
